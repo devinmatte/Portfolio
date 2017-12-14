@@ -8,6 +8,10 @@
             "sizes": "128x128",
             "src": "images/icon.png",
             "type": "img/png"
+        },
+        {
+            "sizes": "16x16",
+            "src": "favicon.ico"
         }
     ],
     "lang": "en-us",
