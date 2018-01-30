@@ -21,7 +21,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90401650-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-90401650-2');
@@ -61,8 +65,9 @@
         <!-- Work -->
         <article id="work">
             <h2 class="major">Work Experience</h2>
-
-            <h3>Zorus Inc.</h3>
+            <a href="https://zorustech.com" target="_blank">
+                <h3>Zorus Inc.</h3>
+            </a>
             <h4>Newtown, CT — Software Engineer</h4>
             <h5>May 2017 - August 2017</h5>
             <p>Worked in a three person team of Software Engineers building a customer portal and corresponding server
@@ -78,15 +83,19 @@
                 works to provide immediate and long term fixes.
             </p>
 
-            <h3>Caraluzzi’s Markets</h3>
-            <h4>Newtown, CT— Supervisor</h4>
+            <a href="https://caraluzzis.com/" target="_blank">
+                <h3>Caraluzzi’s Markets</h3>
+            </a>
+            <h4>Newtown, CT — Supervisor</h4>
             <h5>November 2014 - January 2017</h5>
             <p>Worked as a front end supervisor providing customer service, employee training and maintained front end
                 order.
             </p>
 
-            <h3>Charter Communications</h3>
-            <h4>Newtown, CT— Intern</h4>
+            <a href="http://www.goctv192.com/" target="_blank">
+                <h3>Charter Communications</h3>
+            </a>
+            <h4>Newtown, CT — Intern</h4>
             <h5>February 2015 - May 2015</h5>
             <p>Interned in the Community Access Television division of Charter and completed the broadcast training
                 program.</p>
@@ -98,20 +107,46 @@
 
             <span class="image main">
                 <picture>
+                    <source srcset="images/webp/webdrink.webp" type="image/webp">
+                    <source srcset="images/png/webdrink.png" type="image/png">
+                    <img src="images/png/webdrink.png" alt=""/>
+                </picture>
+            </span>
+            <h3>WebDrink</h3>
+            <p>
+                WebDrink is Computer Science Houses web interface for interacting with our web connected vending
+                machines. I rewrote the entire communication between the Client and the Machines by creating a RESTful
+                API using PHP, Slim, and Doctrine. I then wrote an entire new frontend using React and Redux.
+            </p>
+            <ul class="icons">
+                <li>
+                    <a title="Server" href="https://github.com/ComputerScienceHouse/WebDrink-API" rel="noopener"
+                       target="_blank"
+                       class="icon fa-github">
+                        <span class="label">GitHub</span>
+                    </a>
+                </li>
+                <li>
+                    <a title="Client" href="https://github.com/ComputerScienceHouse/WebDrink-Client" rel="noopener"
+                       target="_blank"
+                       class="icon fa-github">
+                        <span class="label">GitHub</span>
+                    </a>
+                </li>
+            </ul>
+
+            <span class="image main">
+                <picture>
                     <source srcset="images/webp/wasp.webp" type="image/webp">
                     <source srcset="images/png/wasp.png" type="image/png">
                     <img src="images/png/wasp.png" alt=""/>
                 </picture>
             </span>
             <h3>wasp</h3>
-            <p> wasp is an Open Source Command line utility I came up with for a few reasons:
+            <p> A command line utility for generating and managing web configuration files. Including the manifest.json,
+                bower.json, package.json and composer.json. Built in Python, and packaged for Linux. Currently managing
+                as a multiple contributor project.
             </p>
-            <ol>
-                <li>To generate <code>manifest.json</code>'s from the command line</li>
-                <li>To work on an open source project with other people, not just alone</li>
-                <li>To work on something without a frontend</li>
-                <li>To learn how to package software (ie. <code>.deb</code>)</li>
-            </ol>
             <ul class="icons">
                 <li>
                     <a href="https://github.com/devinmatte/wasp" target="_blank" rel="noopener" class="icon fa-github">
@@ -223,6 +258,14 @@
     <footer id="footer">
         <p class="copyright">&copy;2018 Devin Matte</p>
         <p style="font-size: 6px">Design: <a href="https://html5up.net">HTML5 UP</a></p>
+        <ul class="icons">
+            <li>
+                <a title="GitHub" href="https://github.com/devinmatte" rel="noopener" target="_blank"
+                   class="icon fa-github">
+                    <span class="label">GitHub</span>
+                </a>
+            </li>
+        </ul>
     </footer>
 
 </div>
