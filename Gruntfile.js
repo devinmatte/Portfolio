@@ -14,6 +14,9 @@ module.exports = function (grunt) {
             }
         },
         cssmin: {
+            options: {
+                keepSpecialComments: 0
+            },
             target: {
                 files: [{
                     expand: true,
@@ -23,12 +26,24 @@ module.exports = function (grunt) {
                     ext: '.min.css'
                 }]
             }
+        },
+        uglify: {
+            target: {
+                options: {
+                    mangle: false
+                },
+                files: {
+                    'assets/js/main.min.js': 'assets/js/main.js',
+                    'assets/js/util.min.js': 'assets/js/util.js'
+                }
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('default', ['htmlmin', 'cssmin']);
+    grunt.registerTask('default', ['htmlmin', 'cssmin', 'uglify']);
 
 };
