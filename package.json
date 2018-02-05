@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devinmatte/Portfolio.git"
+  },
+  "author": "Devin Matte",
+  "bugs": {
+    "url": "https://github.com/devinmatte/Portfolio/issues"
+  },
+  "homepage": "https://devinmatte.com",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-htmlmin": "^2.4.0"
+  }
+}
