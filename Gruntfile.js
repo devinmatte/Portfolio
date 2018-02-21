@@ -58,11 +58,11 @@ module.exports = function (grunt) {
                         },
                         desktopBrowser: {},
                         windows: {
-                            pictureAspect: 'noChange',
-                            backgroundColor: '#2b5797',
+                            pictureAspect: 'whiteSilhouette',
+                            backgroundColor: '#1f2028',
                             onConflict: 'override',
                             assets: {
-                                windows80Ie10Tile: false,
+                                windows80Ie10Tile: true,
                                 windows10Ie11EdgeTiles: {
                                     small: true,
                                     medium: true,
