@@ -59,7 +59,7 @@ module.exports = function (grunt) {
                         desktopBrowser: {},
                         windows: {
                             pictureAspect: 'whiteSilhouette',
-                            backgroundColor: '#1f2028',
+                            backgroundColor: '#6e64e5',
                             onConflict: 'override',
                             assets: {
                                 windows80Ie10Tile: true,
@@ -73,7 +73,7 @@ module.exports = function (grunt) {
                         },
                         androidChrome: {
                             pictureAspect: 'noChange',
-                            themeColor: '#1F2028',
+                            themeColor: '#6e64e5',
                             manifest: {
                                 display: 'standalone',
                                 orientation: 'notSet',
@@ -87,7 +87,7 @@ module.exports = function (grunt) {
                         },
                         safariPinnedTab: {
                             pictureAspect: 'silhouette',
-                            themeColor: '#1f2028'
+                            themeColor: '#6e64e5'
                         }
                     },
                     settings: {
