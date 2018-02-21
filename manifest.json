@@ -11,7 +11,18 @@
         },
         {
             "sizes": "16x16",
-            "src": "favicon.ico"
+            "src": "images/icon16.png",
+            "type": "img/png"
+        },
+	{
+            "sizes": "32x32",
+            "src": "images/icon32.png",
+            "type": "img/png"
+        },
+	{
+            "sizes": "48x48",
+            "src": "images/icon48.png",
+	    "type": "img/png"
         }
     ],
     "lang": "en-us",
