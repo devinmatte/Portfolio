@@ -40,10 +40,10 @@ module.exports = function (grunt) {
         },
         realFavicon: {
             favicons: {
-                src: 'images/logo.svg',
-                dest: 'images/icons',
+                src: './images/logo.svg',
+                dest: './',
                 options: {
-                    iconsPath: 'images/icons',
+                    iconsPath: './',
                     design: {
                         ios: {
                             pictureAspect: 'backgroundAndMargin',
