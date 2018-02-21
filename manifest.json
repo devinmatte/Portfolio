@@ -1,24 +1,24 @@
 {
-    "background_color": "#1C304B",
-    "description": "Devin Matte's Portfolio Site",
-    "dir": "auto",
-    "display": "minimal-ui",
-    "icons": [
-        {
-            "src": "images/icons/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "images/icons/android-chrome-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ],
-    "lang": "en-us",
-    "name": "Devin Matte Portfolio",
-    "orientation": "any",
-    "short_name": "Devin Matte",
-    "start_url": "/",
-    "theme_color": "#1F2028"
+  "background_color": "#1C304B",
+  "description": "Devin Matte's Portfolio Site",
+  "dir": "auto",
+  "display": "minimal-ui",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "lang": "en-us",
+  "name": "Devin Matte Portfolio",
+  "orientation": "any",
+  "short_name": "Devin Matte",
+  "start_url": "/",
+  "theme_color": "#1F2028"
 }
