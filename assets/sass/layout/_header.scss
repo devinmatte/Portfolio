@@ -1,259 +1,139 @@
 ///
-/// Dimension by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+/// Altitude by Pixelarity
+/// pixelarity.com | hello@pixelarity.com
+/// License: pixelarity.com/license
 ///
 
 /* Header */
 
 	#header {
 		@include vendor('display', 'flex');
-		@include vendor('flex-direction', 'column');
-		@include vendor('align-items', 'center');
-		@include vendor('transition', (
-			'transform #{_duration(article)} ease-in-out',
-			'filter #{_duration(article)} ease-in-out',
-			'opacity #{_duration(article)} ease-in-out',
-		));
-		background-image: -moz-radial-gradient(rgba(0,0,0,0.25) 25%, rgba(0,0,0,0) 55%);
-		background-image: -webkit-radial-gradient(rgba(0,0,0,0.25) 25%, rgba(0,0,0,0) 55%);
-		background-image: -ms-radial-gradient(rgba(0,0,0,0.25) 25%, rgba(0,0,0,0) 55%);
-		background-image: radial-gradient(rgba(0,0,0,0.25) 25%, rgba(0,0,0,0) 55%);
-		max-width: 100%;
-		text-align: center;
+		@include vendor('flex-direction', 'row');
+		color: _palette(accent1, fg-bold);
+		cursor: default;
+		line-height: 1.5;
+		margin: 0 0 3em 0;
+		position: relative;
 
-		> * {
-			@include vendor('transition', 'opacity #{_duration(article)} ease-in-out');
-			position: relative;
-			margin-top: 3.5rem;
+		a {
+			border-bottom: 0;
+			color: inherit;
+		}
 
-			&:before {
-				content: '';
-				display: block;
-				position: absolute;
-				top: calc(-3.5rem - 1px);
-				left: calc(50% - #{_size(border-width) * 1});
-				width: _size(border-width);
-				height: calc(3.5rem + 1px);
-				background: _palette(border);
+		> .logo {
+			@include vendor('flex-grow', '0');
+			@include vendor('flex-shrink', '1');
+			display: inline-block;
+			font-size: 1.25em;
+			font-weight: _font(weight-bold);
+			letter-spacing: _font(letter-spacing-heading);
+			text-transform: uppercase;
+			vertical-align: middle;
+
+			span {
+				border-left: solid 1px _palette(accent1, border);
+				color: _palette(accent1, fg-light);
+				display: inline-block;
+				font-size: 0.8em;
+				margin-left: 0.325em;
+				padding-left: 0.825em;
+				position: relative;
+				top: -0.075em;
 			}
 		}
 
-		> :first-child {
-			margin-top: 0;
+		> nav {
+			@include vendor('flex-grow', '1');
+			@include vendor('flex-shrink', '0');
+			text-align: right;
+			white-space: nowrap;
 
-			&:before {
-				display: none;
-			}
-		}
-
-		.logo {
-			width: 5.5rem;
-			height: 5.5rem;
-			line-height: 5.5rem;
-			border: solid _size(border-width) _palette(border);
-			border-radius: 100%;
-
-			.icon {
-				&:before {
-					font-size: 2rem;
-				}
-			}
-		}
-
-		.content {
-			border-style: solid;
-			border-color: _palette(border);
-			border-top-width: _size(border-width);
-			border-bottom-width: _size(border-width);
-			max-width: 100%;
-
-			.inner {
-				@include vendor('transition', (
-					'max-height #{_duration(intro)} ease',
-					'padding #{_duration(intro)} ease',
-					'opacity #{_duration(article)} ease-in-out'
-				));
-				@include vendor('transition-delay', '0.25s');
-				padding: 3rem 2rem;
-				max-height: 40rem;
-				overflow: hidden;
-
-				> :last-child {
-					margin-bottom: 0;
-				}
-			}
-
-			p {
-				text-transform: uppercase;
-				letter-spacing: _font(letter-spacing);
-				font-size: 0.8rem;
-				line-height: 2;
-			}
-		}
-
-		nav {
 			ul {
-				@include vendor('display', 'flex');
-				margin-bottom: 0;
 				list-style: none;
+				margin: -0.5em -1em 0 0;
 				padding-left: 0;
-				border: solid _size(border-width) _palette(border);
-				border-radius: _size(border-radius);
 
 				li {
+					display: inline-block;
+					font-weight: _font(weight-bold);
+					letter-spacing: _font(letter-spacing-heading);
+					margin-left: 0.5em;
 					padding-left: 0;
-					border-left: solid _size(border-width) _palette(border);
-
-					&:first-child {
-						border-left: 0;
-					}
+					text-transform: uppercase;
 
 					a {
-						display: block;
-						min-width: 7.5rem;
-						height: 2.75rem;
-						line-height: 2.75rem;
-						padding: 0 1.25rem 0 (1.25rem + _font(letter-spacing));
-						text-transform: uppercase;
-						letter-spacing: _font(letter-spacing);
-						font-size: 0.8rem;
-						border-bottom: 0;
+						display: inline-block;
+						line-height: inherit;
+						padding: 0.5em 1em;
+
+						&[href="#menu"] {
+							@include icon;
+
+							&:before {
+								content: '\f0c9';
+								float: right;
+								margin-left: 0.75em;
+							}
+						}
 
 						&:hover {
-							background-color: _palette(border-bg);
-						}
-
-						&:active {
-							background-color: _palette(border-bg-alt);
-						}
-					}
-				}
-			}
-
-			&.use-middle {
-				&:after {
-					content: '';
-					display: block;
-					position: absolute;
-					top: 0;
-					left: calc(50% - #{_size(border-width) * 1});
-					width: _size(border-width);
-					height: 100%;
-					background: _palette(border);
-				}
-
-				ul {
-					li {
-						&.is-middle {
-							border-left: 0;
+							background-color: _palette(accent1, border-bg);
+							border-radius: _size(border-radius);
 						}
 					}
 				}
 			}
 		}
 
-		body.is-article-visible & {
-			@include vendor('transform', 'scale(0.95)');
-			@include vendor('filter', 'blur(0.1rem)');
-			opacity: 0;
-		}
+		@include breakpoint(large) {
+			margin: 0 0 2em 0;
 
-		body.is-loading & {
-			> * {
-				opacity: 0;
-			}
-
-			@include vendor('filter', 'blur(0.125rem)');
-
-			.content {
-				.inner {
-					max-height: 0;
-					padding-top: 0;
-					padding-bottom: 0;
-					opacity: 0;
-				}
-			}
-		}
-
-		@include breakpoint(medium) {
-			.content {
-				p {
-					br {
-						display: none;
-					}
+			> .logo {
+				span {
+					top: -0.05em;
 				}
 			}
 		}
 
 		@include breakpoint(small) {
-			> * {
-				margin-top: 2rem;
+			> .logo {
+				font-size: 1em;
 
-				&:before {
-					top: calc(-2rem - 1px);
-					height: calc(2rem + 1px);
-				}
-			}
-
-			.logo {
-				width: 4.75rem;
-				height: 4.75rem;
-				line-height: 4.75rem;
-
-				.icon {
-					&:before {
-						font-size: 1.75rem;
-					}
-				}
-			}
-
-			.content {
-				.inner {
-					padding: 2.5rem 1rem;
-				}
-
-				p {
-					line-height: 1.875;
+				span {
+					font-size: 1em;
+					top: 0;
 				}
 			}
 		}
 
 		@include breakpoint(xsmall) {
-			padding: 1.5rem 0;
+			height: 44px;
+			line-height: 44px;
+			margin: 0;
+			padding: 0 1.25em;
 
-			.content {
-				.inner {
-					padding: 2.5rem 0;
+			> .logo {
+				font-size: 0.8em;
+
+				span {
+					display: none;
 				}
 			}
 
-			nav {
+			> nav {
+				font-size: 0.8em;
+
 				ul {
-					@include vendor('flex-direction', 'column');
-					min-width: 10rem;
-					max-width: 100%;
+					margin: 0;
 
 					li {
-						border-left: 0;
-						border-top: solid _size(border-width) _palette(border);
-
-						&:first-child {
-							border-top: 0;
-						}
-
 						a {
-							height: 3rem;
-							line-height: 3rem;
-							min-width: 0;
-							width: 100%;
-						}
-					}
-				}
+							padding: 0;
 
-				&.use-middle {
-					&:after {
-						display: none;
+							&:hover {
+								background-color: transparent;
+							}
+						}
 					}
 				}
 			}

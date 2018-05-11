@@ -2,17 +2,6 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        htmlmin: {
-            dist: {
-                options: {                                 // Target options
-                    removeComments: true,
-                    collapseWhitespace: true
-                },
-                files: {                                   // Dictionary of files
-                    'index.html': 'portfolio.html'    // 'destination': 'source'
-                }
-            }
-        },
         cssmin: {
             options: {
                 keepSpecialComments: 0
@@ -107,12 +96,11 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-real-favicon');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
-    grunt.registerTask('default', ['htmlmin', 'cssmin', 'uglify', 'realFavicon', 'clean']);
+    grunt.registerTask('default', ['cssmin', 'uglify', 'realFavicon', 'clean']);
 
 };

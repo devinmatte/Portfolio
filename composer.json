@@ -1,0 +1,16 @@
+{
+  "name": "devinmatte/Portfolio",
+  "description": "A Portfolio to show off my resume and projects",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Devin Matte",
+      "email": "devin@devinmatte.com"
+    }
+  ],
+  "require": {
+    "slim/slim": "^3.9",
+    "slim/twig-view": "2.1.1"
+  }
+}
