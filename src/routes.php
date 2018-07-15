@@ -13,7 +13,7 @@ $app->get('/', function (Request $request, Response $response, $args) {
     $database = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
     $conn = $database->getMysqliConn();
 
-    $sql = "SELECT * from `projects`;";
+    $sql = "SELECT * from `projects` ORDER BY `priority`;";
     $projects = $conn->query($sql);
 
     $client = new Client([
