@@ -3,6 +3,8 @@
 use Slim\Http\Request;
 use Slim\Http\Response;
 use GuzzleHttp\Client;
+use GuzzleHttp\HandlerStack;
+use Kevinrob\GuzzleCache\CacheMiddleware;
 
 const DEVINMATTE = 'devinmatte';
 
@@ -16,11 +18,16 @@ $app->get('/', function (Request $request, Response $response, $args) {
     $sql = "SELECT * from `projects` ORDER BY `priority`;";
     $projects = $conn->query($sql);
 
+    $stack = HandlerStack::create();
+    $stack->push(new CacheMiddleware(), 'cache');
+
     $client = new Client([
         // Base URI is used with relative requests
         'base_uri' => 'https://api.github.com',
         // You can set any number of default request options.
-        'timeout'  => 2.0,
+	'timeout'  => 2.0,
+	// Using the handler stack for middleware
+	'handler' => $stack,
     ]);
 
     $projects = $projects->fetch_all(MYSQLI_BOTH);
