@@ -1,0 +1,91 @@
+/* Projects */
+
+.projects {
+    box-shadow: 0 0 2em 0 _palette(shadow);
+    margin: 0 0 _size(element-margin) 0;
+
+    h3, h5 {
+        color: $grey!important;
+    }
+
+    > article {
+        @include vendor('display', 'flex');
+        @include vendor('flex-direction', 'row');
+        background-color: #ffffff;
+        color: $grey;
+        margin-bottom: 1.5em;
+
+        .content {
+            @include padding(4em, 5em);
+            text-align: left;
+            width: 65%;
+        }
+
+        .image {
+            border-radius: 0;
+            position: relative;
+            width: 35%;
+
+            img, picture {
+                border-radius: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        &:nth-child(2n - 1) {
+            @include vendor('flex-direction', 'row-reverse');
+        }
+    }
+
+    @include breakpoint(xlarge) {
+        > article {
+            .content {
+                @include padding(4em, 4em);
+            }
+        }
+    }
+
+    @include breakpoint(medium) {
+        > article {
+            @include vendor('flex-direction', 'column');
+
+            .image {
+                img, picture {
+                    position: relative;
+                }
+            }
+
+            > :nth-child(1) {
+                width: 100%;
+            }
+
+            > :nth-child(2) {
+                width: 100%;
+            }
+
+            &:nth-child(2n - 1) {
+                @include vendor('flex-direction', 'column');
+
+                > :nth-child(1) {
+                    width: 100%;
+                }
+
+                > :nth-child(2) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(small) {
+        > article {
+            .content {
+                @include padding(3em, 2em);
+            }
+        }
+    }
+}
