@@ -71,8 +71,8 @@
 				top: 0;
 				left: 0;
 				width: 100%;
-				opacity: 0;
-				visibility: hidden;
+				opacity: 1;
+				visibility: visible;
 				z-index: 0;
 
 				&.visible {

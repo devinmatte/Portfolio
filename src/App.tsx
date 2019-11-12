@@ -22,8 +22,8 @@ const App: React.FC = () => {
                         <h1>Devin Matte</h1>
                         <p>Software Engineering Student at Rochester Institute of Technology with a focus on Full Stack Web Development and DevOps</p>
                         <ul className="actions">
-                            <li><a href="/resume" className="button special fit">Resume</a></li>
-                            <li><a href="/github" className="button special fit">GitHub</a></li>
+                            <li><a href="https://resume.devinmatte.com" className="button special fit">Resume</a></li>
+                            <li><a href="https://github.com/devinmatte" className="button special fit">GitHub</a></li>
                         </ul>
                     </section>
                 </div>
