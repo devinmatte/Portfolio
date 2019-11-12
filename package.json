@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && gulp",
+    "build": "gulp && react-scripts build",
+    "prod": "gulp && react-scripts build && serve -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

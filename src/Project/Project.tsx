@@ -9,14 +9,14 @@ type ProjectProps = {
 
 const Project: React.FunctionComponent<ProjectProps> = (props) => {
   const {name, description, imageKey, children} = props;
-  const imageWebpSource = "images/projects/webp/" + imageKey + ".webp"
-  const imagePngSource = "images/projects/png/" + imageKey + ".png"
+  const imageWebpSource = "images/projects/webp/" + encodeURI(imageKey) + ".webp"
+  const imagePngSource = "images/projects/png/" + encodeURI(imageKey) + ".png"
   return (
     <article>
         <div className="image">
             <picture className="image">
-                <source src={imageWebpSource} type="image/webp"/>
-                <source src={imagePngSource} type="image/png"/>
+                <source srcSet={imageWebpSource} type="image/webp"/>
+                <source srcSet={imagePngSource} type="image/png"/>
                 <img src={imagePngSource} data-position="center" alt={name + " Screenshot"}/>
             </picture>
         </div>
