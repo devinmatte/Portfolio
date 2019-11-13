@@ -4,11 +4,12 @@
     box-shadow: 0 0 2em 0 _palette(shadow);
     margin: 0 0 _size(element-margin) 0;
 
-    h3, h5 {
-        color: $grey!important;
+    h3,
+    h5 {
+        color: $grey !important;
     }
 
-    > article {
+    >article {
         @include vendor('display', 'flex');
         @include vendor('flex-direction', 'row');
         background-color: #ffffff;
@@ -26,7 +27,8 @@
             position: relative;
             width: 35%;
 
-            img, picture {
+            img,
+            picture {
                 border-radius: 0;
                 position: absolute;
                 top: 0;
@@ -42,7 +44,7 @@
     }
 
     @include breakpoint(xlarge) {
-        > article {
+        >article {
             .content {
                 @include padding(4em, 4em);
             }
@@ -50,11 +52,13 @@
     }
 
     @include breakpoint(medium) {
-        > article {
+        >article {
             @include vendor('flex-direction', 'column');
 
             .image {
-                img, picture {
+
+                img,
+                picture {
                     position: relative;
                 }
             }
@@ -82,7 +86,7 @@
     }
 
     @include breakpoint(small) {
-        > article {
+        >article {
             .content {
                 @include padding(3em, 2em);
             }

@@ -6,75 +6,79 @@
 
 /* Spotlights */
 
-	.spotlights {
-		box-shadow: 0 0 2em 0 _palette(shadow);
-		margin: 0 0 _size(element-margin) 0;
+.spotlights {
+    box-shadow: 0 0 2em 0 _palette(shadow);
+    margin: 0 0 _size(element-margin) 0;
 
-		> article {
-			@include vendor('display', 'flex');
-			@include vendor('flex-direction', 'row');
+    >article {
+        @include vendor('display', 'flex');
+        @include vendor('flex-direction', 'row');
 
-			.content {
-				@include padding(4em, 5em);
-				text-align: left;
-				width: 75%;
-			}
+        .content {
+            @include padding(4em, 5em);
+            text-align: left;
+            width: 75%;
+        }
 
-			.image {
-				border-radius: 0;
-				position: relative;
-				width: 25%;
+        .image {
+            border-radius: 0;
+            position: relative;
+            width: 25%;
 
-				img, picture {
-					border-radius: 1em;
-					position: absolute;
-					top: 0;
-					left: 0;
-					padding: 1em;
-					height: 100%;
-					width: 100%;
-				}
-			}
+            img,
+            picture {
+                border-radius: 1em;
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 1em;
+                height: 100%;
+                width: 100%;
+            }
+        }
 
-			&:nth-child(2n - 1) {
-				@include vendor('flex-direction', 'row-reverse');
-			}
-		}
+        &:nth-child(2n - 1) {
+            @include vendor('flex-direction', 'row-reverse');
+        }
+    }
 
-		@include breakpoint(xlarge) {
-			> article {
-				.content {
-					@include padding(4em, 4em);
-				}
-			}
-		}
+    @include breakpoint(xlarge) {
+        >article {
+            .content {
+                @include padding(4em, 4em);
+            }
+        }
+    }
 
-		@include breakpoint(medium) {
-			> article {
-				@include vendor('flex-direction', 'column');
+    @include breakpoint(medium) {
+        >article {
+            @include vendor('flex-direction', 'column');
 
-				.content {
-					width: 100%;
-				}
-				.image {
-					visibility: hidden;
-					height: 0em;
-					width: 0em;
-					img, picture {
-						position: relative;
-						visibility: hidden;
-						height: 0em;
-						width: 0em;
-					}
-				}
-			}
-		}
+            .content {
+                width: 100%;
+            }
 
-		@include breakpoint(small) {
-			> article {
-				.content {
-					@include padding(3em, 2em);
-				}
-			}
-		}
-	}
+            .image {
+                visibility: hidden;
+                height: 0em;
+                width: 0em;
+
+                img,
+                picture {
+                    position: relative;
+                    visibility: hidden;
+                    height: 0em;
+                    width: 0em;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(small) {
+        >article {
+            .content {
+                @include padding(3em, 2em);
+            }
+        }
+    }
+}
