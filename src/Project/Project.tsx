@@ -2,9 +2,9 @@ import React from 'react';
 import '../styles/main.scss';
 
 type ProjectProps = {
-  name: string,
-  description: string,
-  imageKey: string
+  name: string;
+  description: string;
+  imageKey: string;
 }
 
 const Project: React.FunctionComponent<ProjectProps> = (props) => {

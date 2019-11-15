@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/main.scss';
 
 type CompanyProps = {
-  company: string
+  company: string;
 }
 
 const Company: React.FunctionComponent<CompanyProps> = (props) => {

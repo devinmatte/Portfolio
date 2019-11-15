@@ -29,7 +29,7 @@ const App: React.FC = () => {
                 </div>
                 <div className="slider">
                     <article>
-                        <img src="/images/devinmatte.jpg" alt="" data-position="fit right"/>
+                        <img src="/images/devinmatte.jpg" alt="Devin Matte Image" data-position="fit right"/>
                     </article>
                 </div>
             </section>
