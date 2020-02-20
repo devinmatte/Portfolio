@@ -41,6 +41,13 @@ const App: React.FC = () => {
               <h2>Experience</h2>
             </header>
             <div className="spotlights">
+            <Company company="Datadog">
+                <Job
+                  position="Software Engineering Intern"
+                  range="Jan 2020 - Present"
+                  desciption="Full-time Software Engineer on the Data Engineering Infrastructure team building out tools for data engineers to run Apache Spark pipelines for data processing. Built out a new frontend with React in TypeScript for the product."
+                />
+              </Company>
               <Company company="Constant Contact">
                 <Job
                   position="Remote Software Engineering Intern"
