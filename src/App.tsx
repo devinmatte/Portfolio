@@ -57,7 +57,7 @@ const App: React.FC = () => {
                 <Job
                   position={"Software Engineering Intern"}
                   range={"May 2020 - Aug 2020"}
-                  desciption={"Full-time Software Engineer on the Developer Tools team. Built stability reporting tool."}
+                  desciption={"Interned on the Developer Tools Team builing a stability tracking application. Built using React, Typescript, Swift, and Kubernetes."}
                 />
               </Company>
               <Company company={"Constant Contact"}>
