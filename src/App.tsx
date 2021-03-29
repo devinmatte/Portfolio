@@ -1,10 +1,12 @@
-import React from 'react';
 import './styles/main.scss';
-import Job from './Experience/Job';
+
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
 import Company from './Experience/Company'
-import Project from './Project/Project'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+import Job from './Experience/Job';
+import Project from './Project/Project'
+import React from 'react';
 
 const App: React.FC = () => {
   const today = new Date();
@@ -15,14 +17,15 @@ const App: React.FC = () => {
         <div className={"inner"}>
 
           <header id={"header"}>
-            <a href={"/"} className={"logo"}>Devin Matte <span>Full Stack Software Engineer</span></a>
+            <a href={"/"} className={"logo"}>Devin Matte <span>Software Engineer</span></a>
           </header>
 
           <section id={"banner"}>
             <div className={"items"}>
               <section className={"accent1"}>
                 <h1>Devin Matte</h1>
-                <p>Software Engineering Student at Rochester Institute of Technology with a focus on Full Stack Web Development and DevOps</p>
+                <p>Software Engineer @ Datadog</p>
+                <p>Boston, MA</p>
                 <ul className={"actions"}>
                   <li><a href={"https://resume.devinmatte.com"} className={"button special fit"} title={"Resume"}>Resume</a></li>
                   <li><a href={"https://github.com/devinmatte"} className={"button special fit"} title={"GitHub"}>GitHub</a></li>
@@ -42,9 +45,14 @@ const App: React.FC = () => {
             </header>
             <div className={"spotlights"}>
               <Company company={"Datadog"}>
+              <Job
+                  position={"Software Engineer"}
+                  range={"Feb 2021 - Present"}
+                  desciption={"Software Engineer on the Data Engineering Infrastructure teams building out tools for data engineers to run Apache Spark pipelines for data processing as well as Data Discovery and Lineage."}
+                />
                 <Job
                   position={"Software Engineering Intern"}
-                  range={"Aug 2020 - Present"}
+                  range={"Aug 2020 - Feb 2021"}
                   desciption={"Part-time Software Engineer on the Data Engineering Infrastructure team building out tools for data engineers to run Apache Spark pipelines for data processing."}
                 />
                 <Job
